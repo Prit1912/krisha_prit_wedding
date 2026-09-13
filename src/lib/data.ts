@@ -1,3 +1,11 @@
+import type { StaticImageData } from "next/image";
+import engagementImg from "../../public/images/engagement.png";
+import mandapImg from "../../public/images/mandap.png";
+import haldiImg from "../../public/images/haldi.png";
+import garbaImg from "../../public/images/garba.png";
+import baaratImg from "../../public/images/baarat.png";
+import hastmelapImg from "../../public/images/hastmelap.png";
+
 export const couple = {
   groom: {
     firstName: "Prit",
@@ -30,7 +38,7 @@ export type WeddingEvent = {
   subtitle: string;
   date: string;
   time: string;
-  image: string;
+  image: StaticImageData;
   description: string;
 };
 
@@ -41,7 +49,7 @@ export const events: WeddingEvent[] = [
     subtitle: "Ring Ceremony",
     date: "December 5, 2026",
     time: "8:00 AM",
-    image: "/images/engagement.png",
+    image: engagementImg,
     description:
       "Celebrate the beginning of forever as the couple exchanges rings, marking the start of their beautiful journey together with love, joy, and blessings.",
   },
@@ -51,7 +59,7 @@ export const events: WeddingEvent[] = [
     subtitle: "Mandap Muhurat",
     date: "December 5, 2026",
     time: "2:00 PM",
-    image: "/images/mandap.png",
+    image: mandapImg,
     description:
       "Witness the sacred Mandap Ropan, where prayers and rituals bless the wedding venue and mark the auspicious beginning of the wedding celebrations.",
   },
@@ -61,7 +69,7 @@ export const events: WeddingEvent[] = [
     subtitle: "Turmeric Ceremony",
     date: "December 5, 2026",
     time: "3:30 PM",
-    image: "/images/haldi.png",
+    image: haldiImg,
     description:
       "Join us for a vibrant Haldi ceremony filled with laughter, traditions, and turmeric blessings as we prepare the bride and groom for their big day.",
   },
@@ -71,7 +79,7 @@ export const events: WeddingEvent[] = [
     subtitle: "Sangeet & Dance",
     date: "December 5, 2026",
     time: "7:30 PM",
-    image: "/images/garba.png",
+    image: garbaImg,
     description:
       "Get ready for a night full of music, garba, and dazzling performances as friends and family light up the dance floor.",
   },
@@ -81,7 +89,7 @@ export const events: WeddingEvent[] = [
     subtitle: "Baarat",
     date: "December 6, 2026",
     time: "7:30 AM",
-    image: "/images/baarat.png",
+    image: baaratImg,
     description:
       "The groom's procession arrives with music, dance, and celebration, marking the joyful arrival of the baarat.",
   },
@@ -91,7 +99,7 @@ export const events: WeddingEvent[] = [
     subtitle: "Main Wedding",
     date: "December 6, 2026",
     time: "10:30 AM",
-    image: "/images/hastmelap.png",
+    image: hastmelapImg,
     description:
       "Join us as two hearts unite in the sacred bond of marriage, surrounded by love, traditions, and the blessings of family and friends.",
   },

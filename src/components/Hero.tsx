@@ -5,6 +5,8 @@ import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import { couple } from "@/lib/data";
 import BellIcon from "@/components/icons/BellIcon";
+import ganpatiImg from "../../public/images/ganpati.png";
+import heroImg from "../../public/images/hero.png";
 
 export default function Hero() {
   return (
@@ -47,28 +49,24 @@ export default function Hero() {
 
           <div className="mb-10">
             <Image
-              src="/images/ganpati.png"
+              src={ganpatiImg}
               alt="Shree Ganpati"
-              width={1167}
-              height={1347}
               className="w-16 h-auto md:w-20 mx-auto mb-3"
               priority
             />
 
             <p className="eyebrow mb-4">|| Shree Ganeshay Namah ||</p>
 
-            <p className="font-serif italic font-bold text-4xl md:text-5xl text-[var(--wine)] tracking-wide">
-              {couple.bride.firstName}
-            </p>
+            <p className="hero-name">{couple.bride.firstName}</p>
             <p className="text-[var(--charcoal)]/75 text-sm md:text-base leading-relaxed max-w-xs mx-auto mt-2">
               D/O {couple.bride.mother} &amp; {couple.bride.father}
             </p>
 
-            <p className="text-[var(--gold)] font-serif text-lg my-4">&amp;</p>
+            <div className="hero-and" aria-hidden="true">
+              <span>&amp;</span>
+            </div>
 
-            <p className="font-serif italic font-bold text-4xl md:text-5xl text-[var(--wine)] tracking-wide">
-              {couple.groom.firstName}
-            </p>
+            <p className="hero-name">{couple.groom.firstName}</p>
             <p className="text-[var(--charcoal)]/75 text-sm md:text-base leading-relaxed max-w-xs mx-auto mt-2">
               S/O {couple.groom.mother} &amp; {couple.groom.father}
             </p>
@@ -85,14 +83,14 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.15 }}
         >
-          <div className="hero-frame aspect-[2/3] w-64 sm:w-72 md:w-80 mx-auto">
+          <div className="hero-frame aspect-square w-72 sm:w-80 md:w-96 mx-auto">
             <Image
-              src="/images/hero.png"
+              src={heroImg}
               alt={`${couple.bride.firstName} & ${couple.groom.firstName}`}
               fill
-              className="object-cover"
+              className="object-contain"
               priority
-              sizes="(min-width: 768px) 320px, 60vw"
+              sizes="(min-width: 768px) 384px, 80vw"
             />
           </div>
         </motion.div>

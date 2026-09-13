@@ -9,7 +9,7 @@ import SectionHeading from "@/components/SectionHeading";
 function EventImage({ event }: { event: (typeof events)[number] }) {
   return (
     <div className="event-card">
-      <div className="relative aspect-[2/3]">
+      <div className="event-image-wrap">
         <Image
           src={event.image}
           alt={event.title}

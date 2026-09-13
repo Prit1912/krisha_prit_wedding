@@ -21,8 +21,10 @@ export default function Footer() {
           occasion.
         </p>
         <div className="w-24 h-px bg-[var(--gold)] mx-auto mb-6 opacity-70" />
-        <p className="font-script text-4xl md:text-5xl">
-          {couple.bride.firstName} &amp; {couple.groom.firstName}
+        <p className="footer-names">
+          <span className="footer-name">{couple.bride.firstName}</span>
+          <span className="footer-and">&amp;</span>
+          <span className="footer-name">{couple.groom.firstName}</span>
         </p>
       </div>
     </motion.footer>
